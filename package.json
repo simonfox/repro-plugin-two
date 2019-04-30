@@ -43,60 +43,10 @@
     "typescript-fsa": "^3.0.0-beta-2",
     "vinyl-fs": "^3.0.3"
   },
-  "scripts": {
-    "build": "au build-plugin",
-    "start": "au run",
-    "prepare": "npm run build",
-    "pretest": "au lint",
-    "preversion": "au test",
-    "test": "au test"
-  },
-  "engines": {
-    "node": ">=8.9.0"
-  },
   "main": "dist/commonjs/index.js",
-  "module": "dist/native-modules/index.js",
-  "private": true,
   "files": [
     "dist"
   ],
-  "jest": {
-    "moduleNameMapper": {
-      "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding"
-    },
-    "modulePaths": [
-      "<rootDir>/src",
-      "<rootDir>/node_modules"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
-    "transform": {
-      "^.+\\.(css|less|sass|scss|styl|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub",
-      "^.+\\.ts$": "ts-jest"
-    },
-    "testRegex": "\\.spec\\.(ts|js)$",
-    "setupFiles": [
-      "<rootDir>/test/jest-pretest.ts"
-    ],
-    "testEnvironment": "node",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,ts}",
-      "!**/*.spec.{js,ts}",
-      "!**/node_modules/**",
-      "!**/test/**"
-    ],
-    "coverageDirectory": "<rootDir>/test/coverage-jest",
-    "coverageReporters": [
-      "json",
-      "lcov",
-      "text",
-      "html"
-    ]
-  },
   "peerDependencies": {
     "typescript-fsa": "^3.0.0-beta-2"
   }

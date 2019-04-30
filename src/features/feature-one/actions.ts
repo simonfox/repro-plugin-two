@@ -1,9 +1,9 @@
 import { actionCreatorFactory } from "typescript-fsa";
 import { FEATURE_REDUCER_KEY } from "./constants";
 
-const action = actionCreatorFactory(FEATURE_REDUCER_KEY);
+const actionCreator = actionCreatorFactory(FEATURE_REDUCER_KEY);
 
-const featureOne = action<{ route: string }>("feature-one");
+const featureOne = actionCreator<{ name: string, order: number }>("feature-one");
 
 export default {
   featureOne,

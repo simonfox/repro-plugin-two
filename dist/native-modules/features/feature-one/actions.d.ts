@@ -1,15 +1,18 @@
 declare const _default: {
     featureOne: {
         (payload: {
-            route: string;
+            name: string;
+            order: number;
         }, meta?: {
             [key: string]: any;
         }): import("typescript-fsa").Action<{
-            route: string;
+            name: string;
+            order: number;
         }>;
         type: string;
         match: (action: import("typescript-fsa").AnyAction) => action is import("typescript-fsa").Action<{
-            route: string;
+            name: string;
+            order: number;
         }>;
     };
 };
